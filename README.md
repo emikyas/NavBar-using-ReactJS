@@ -1,4 +1,5 @@
 # Navigation Bar with React Routes
+This template displays Navigation bar with routes and not-found page
 
 ## Tools
 
