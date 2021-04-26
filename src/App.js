@@ -1,5 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+
+import Home from './components/home';
+import Posts from './components/posts';
+import NavBar from './components/navBar';
+import Products from './components/products';
+import NotFound from './components/notFound';
+import ProductDetails from './components/productDetails';
+
+import {
+  Route,
+  Switch,
+  Redirect
+} from 'react-router-dom';
 
 function App() {
   return (
