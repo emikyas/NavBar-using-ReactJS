@@ -1,12 +1,12 @@
 import React from 'react';
 
-const MovieForm = ({match, history}) => {
+const ProductForm = ({match, history}) => {
     return (
         <div>
             <h1>Product Details - {match.params.id}</h1>
-            <button onClick={() => history.push('/movies')}>Save</button>
+            <button onClick={() => history.push('/products')}>Save</button>
         </div>
      );
 }
  
-export default MovieForm;
+export default ProductForm;

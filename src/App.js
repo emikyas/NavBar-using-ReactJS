@@ -1,10 +1,12 @@
 import './App.css';
+import React, { Component } from 'react';
 
 import Home from './components/home';
 import Posts from './components/posts';
 import NavBar from './components/navBar';
 import Products from './components/products';
 import NotFound from './components/notFound';
+import ProductForm from './components/productForm';
 import ProductDetails from './components/productDetails';
 
 import {
@@ -13,25 +15,30 @@ import {
   Redirect
 } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  
+  
+  render() {
+    return (
+      <React.Fragment>
+        <NavBar />
+        <main className="container">
+        <div className="content">
+          <Switch>
+
+            <Route path="/posts" component={Posts} />
+            <Route path="/products/:id" component={ProductForm} />
+            <Route path="/products" component={Products} />
+            <Route path="/" component={Home} />
+            <Route path="/not-found" component={NotFound} />
+            <Redirect to="/not-found" />
+
+          </Switch>
+        </div>
+        </main>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
