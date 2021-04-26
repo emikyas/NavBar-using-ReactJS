@@ -29,7 +29,7 @@ class App extends Component {
             <Route path="/posts" component={Posts} />
             <Route path="/products/:id" component={ProductForm} />
             <Route path="/products" component={Products} />
-            <Route path="/" component={Home} />
+            <Route path="/" exact component={Home} />
             <Route path="/not-found" component={NotFound} />
             <Redirect to="/not-found" />
 
