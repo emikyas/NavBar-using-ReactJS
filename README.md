@@ -1,4 +1,4 @@
-# Navigation Bar with React App
+# Navigation Bar with React Routes
 
 ## Tools
 
